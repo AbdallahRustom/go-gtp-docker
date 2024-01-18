@@ -41,7 +41,7 @@ func main() {
 	TrafficType := "http_get"
 	EUuIFName := "lo"
 	HTTPURL := "http://172.22.0.254/"
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 100; i++ {
 		
 		imsi := imsiGenerator(i, IMSI)
 		msisdn := imsiGenerator(i, MSISDN)
