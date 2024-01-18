@@ -100,10 +100,10 @@ func (m *mme) handleCreateSessionResponse(c *gtpv2.Conn, sgwAddr net.Addr, msg m
 				}
 				session.AddTEID(it, teid)
 				
-				m.sgw.s1uIP, err = childIE.IPAddress()
-				if err != nil {
-					return err
-				}
+				// m.sgw.s1uIP, err = childIE.IPAddress()
+				// if err != nil {
+				// 	return err
+				// }
 
 			}
 		}
@@ -169,10 +169,10 @@ func (m *mme) handleModifyBearerResponse(c *gtpv2.Conn, sgwAddr net.Addr, msg me
 				}
 				session.AddTEID(it, teid)
 
-				// m.sgw.s1uIP, err = childIE.IPAddress()
-				// if err != nil {
-				// 	return err
-				// }
+				m.sgw.s1uIP, err = childIE.IPAddress()
+				if err != nil {
+					return err
+				}
 			}
 		}
 	} else {
